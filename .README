@@ -1,0 +1,12 @@
+; ------------------------------------------------------------------------------------------
+; cd ~/github/kafka-stack-docker-compose
+; using single zk:2179, kafak:9092,9093,9094
+; caution : zk:2181 -> zk:2179, because of preventing use 2181 port by windows system ports
+; ------------------------------------------------------------------------------------------
+sudo docker-compose -f zk-single-kafka-multiple.yml up -d 
+
+; ------------------------------------------------------------------------------------------
+; cmak for kafak clustering
+; cmak monitor zk:2197
+; ------------------------------------------------------------------------------------------
+cd /opt/cmak; ./run.sh
